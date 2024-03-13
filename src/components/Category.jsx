@@ -69,10 +69,10 @@ function Category({ addStatus  }) {
         const data ={...category,videos:arr}
         const res=await updateCategory(data,catId)
         if (res.status>=200 && res.status<300) {
-            toast('success')
+            toast.success('video deleted')
             getData()
         } else {
-            toast('error')
+            toast('Error while deleting')
         }
            
 
